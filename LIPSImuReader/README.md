@@ -1,7 +1,6 @@
-# LIPSImuReader #
+# LIPSImuReader
 
-Build steps:
-
+## Build steps:
 ```
 $ mkdir build
 $ cd build
@@ -16,6 +15,7 @@ $ make
 [100%] Built target LIPSImuReader
 ```
 
+## Run sample:
 After sample is compiled successfully, type command to run it.
 
 ```
@@ -32,9 +32,9 @@ $ ./Bin/LIPSImuReader 100 100
 [100] Gyro (X,Y,Z) = (-18.2, 0.28, -18.62),	Accel (X,Y,Z) = (-1.01687, -0.119316, -0.039955)
 ```
 
-Gyro and Accel data will be output every 100ms for 100 times
+> NOTE: Gyro and Accel data will be output every 100ms for 100 times
 
-NOTE:
-*  Gyro data sensitivy: +-2000 dps(degrees-per-second)
-* Accel data sensitivy: +-2 g
+> IMU sensor config for LIPSedge M3:
+>  *  Gyro data sensitivy: +-2000 dps(degrees-per-second)
+>  * Accel data sensitivy: +-2 g
 
