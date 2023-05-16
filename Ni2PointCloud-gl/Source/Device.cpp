@@ -251,7 +251,8 @@ void setColorVideoMode()
     {
         if ( g_colorVideoModes[i].getResolutionX() == g_depthVideoModes[g_selectedDepthRes].getResolutionX()
                 && g_colorVideoModes[i].getResolutionY() == g_depthVideoModes[g_selectedDepthRes].getResolutionY()
-                && g_colorVideoModes[i].getFps() == g_depthVideoModes[g_selectedDepthRes].getFps() )
+                && g_colorVideoModes[i].getFps() == g_depthVideoModes[g_selectedDepthRes].getFps()
+                && g_colorVideoModes[i].getPixelFormat() == openni::PIXEL_FORMAT_RGB888 )
         {
             index = i;
         }
@@ -262,7 +263,8 @@ void setColorVideoMode()
         for ( int i = 0; i < g_colorVideoModeSize; i++ )
         {
             if ( g_colorVideoModes[i].getResolutionX() == g_depthVideoModes[g_selectedDepthRes].getResolutionX()
-                    && g_colorVideoModes[i].getResolutionY() == g_depthVideoModes[g_selectedDepthRes].getResolutionY() )
+                    && g_colorVideoModes[i].getResolutionY() == g_depthVideoModes[g_selectedDepthRes].getResolutionY()
+                    && g_colorVideoModes[i].getPixelFormat() == openni::PIXEL_FORMAT_RGB888 )
             {
                 printf( "Warning: Depth FPS and Color FPS are different.\n" );
                 index = i;
@@ -273,7 +275,8 @@ void setColorVideoMode()
         {
             for ( int i = 0; i < g_colorVideoModeSize; i++ )
             {
-                if ( g_colorVideoModes[i].getResolutionX() == g_depthVideoModes[g_selectedDepthRes].getResolutionX() )
+                if ( g_colorVideoModes[i].getResolutionX() == g_depthVideoModes[g_selectedDepthRes].getResolutionX()
+                        && g_colorVideoModes[i].getPixelFormat() == openni::PIXEL_FORMAT_RGB888 )
                 {
                     printf( "Warning: Depth resolution and Color resolution are different.\n" );
                     index = i;
