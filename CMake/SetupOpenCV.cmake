@@ -3,7 +3,8 @@
 ## Set OpenCV Version ##
 if(WINDOWS AND MSVC AND MSVC_VERSION LESS 1900)
     ## In Windows, OpenCV 3.4 not support Visual Studio version older than 2015
-    set(USE_CV3 OFF CACHE BOOL "Build with OpenCV3.")
+    set(USE_CV3 OFF CACHE BOOL "Build with OpenCV2.")
+    message(WARNING "OpenCV3 is not supported. Please upgrade Visual Studio to 2015 or later versions.")
 else()
     set(USE_CV3 ON CACHE BOOL "Build with OpenCV3.")
 endif()
@@ -41,7 +42,7 @@ endif()
 
 message(STATUS "\nSearch OpenCVConfig.cmake in " ${OpenCV_DIR})
 message(STATUS "If you would like to change the searching folder, please modify the value of OpenCV_DIR.\n")
-find_package(OpenCV ${OPENCV_VER_REQ} REQUIRED)
+find_package(OpenCV REQUIRED)
 
 if(OpenCV_FOUND)
     set(OPENCV_VER_FOUND ${OpenCV_VERSION})
@@ -58,7 +59,7 @@ if(OpenCV_FOUND)
     message(STATUS "OPENCV_INC = " ${OPENCV_INC})
     message(STATUS "OPENCV_LIB = " ${OPENCV_LIB})
 else()
-    message(STATUS "OpenCV Version Required: " ${OPENCV_VER_REQ})
+    message(STATUS "OpenCV Version Recommended: " ${OPENCV_VER_REQ})
     message(SEND_ERROR "OpenCV NOT Found!")
 endif()
 message(STATUS "====================================================================================================\n")
