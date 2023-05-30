@@ -5,15 +5,16 @@ There are some examples showing device management handled by OpenNI2 framework.
 ## List of Samples:
 |Name|Description|Camera|
 |----|----|----|
-|[LIPSCameraMatrix](./LIPSCameraMatrix)| Simple OpenNI2 program to query supported video modes and list camera intrinsic/extrinsic parameters| all LIPSedge cameras |
-|[LIPSImuReader](./LIPSImuReader)| Program to read IMU sensor data (Accel. & Gyro) from LIPSedge camera | camera with IMU sensor support, e.g. LIPSedge M3 |
-|[LIPSLensModeSelect-gl](./LIPSLensModeSelect-gl)| Controll LIPSedge camera to switch between two range modes, normal and near(or closed), at run time. | camera that supports multi range modes, e.g. LIPSedge DL/M3 |
-|[LIPSPowerTest-gl](./LIPSPowerTest-gl)| Put camera into sleep mode to shutdown projector/emitter temporarily | camera that supports sleep mode, e.g. LIPSedge DL/M3 |
-|[Ni2CenterRead](./Ni2CenterRead)| Simple OpenNI2 program to show depth value at center point of frame | all LIPSedge cameras |
+|[LIPSCameraMatrix](./LIPSCameraMatrix)| Simple OpenNI2 tool to query supported video modes and list camera intrinsic/extrinsic parameters | all LIPSedge cameras |
+|[LIPSImuReader](./LIPSImuReader)| Tool to read IMU sensor data (Accel. & Gyro) from LIPSedge camera | LIPSedge camera with IMU sensor support, e.g. LIPSedge M3, AE400 |
+|[LIPSLensModeSelect-gl](./LIPSLensModeSelect-gl)| Controll LIPSedge camera to switch between two range modes, normal and near(or closed), at runtime. | LIPSedge camera that supports multi range modes, e.g. LIPSedge DL/M3 |
+|[LIPSPowerTest-gl](./LIPSPowerTest-gl)| Put camera into sleep mode to shutdown projector/emitter temporarily | LIPSedge camera that supports sleep mode, e.g. LIPSedge DL/M3 |
+|[Ni2CenterRead](./Ni2CenterRead)| Simple OpenNI2 console program to show depth value at center point of frame | all LIPSedge cameras |
 |[Ni2EventBasedViewer-gl](./Ni2EventBasedViewer-gl)| OpenNI2 device management by event-driven design | all LIPSedge cameras |
 |[Ni2PointCloud-gl](./Ni2PointCloud-gl)| An OpenNI2 sample uses OpenGL to visualize pointcloud data in 3D | LIPSedge camera that supports image registration |
 |[Ni2RawViewer-gl](./Ni2RawViewer-gl)| A simple tool to read OpenNI2 frames captured as raw data format | all LIPSedge cameras |
 |[Ni2SimpleViewer-gl](./Ni2SimpleViewer-gl)| A simplifiled version of NiViewer that uses OpenGL to disply Depth/IR/Color frames | all LIPSedge cameras |
+|[Ni2SimpleViewer-cv](./Ni2SimpleViewer-cv)| A simplifiled version of NiViewer that uses OpenCV to disply Depth/IR/Color frames | all LIPSedge cameras |
 
 
 ### LIPSedge SDK installation:
